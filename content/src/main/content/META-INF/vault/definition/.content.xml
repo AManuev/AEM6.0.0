@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2014-08-27T12:39:52.813+03:00"
+    jcr:createdBy="admin"
+    jcr:description=""
+    jcr:lastModified="{Date}2014-08-27T12:39:52.813+03:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="vlt:PackageDefinition"
+    buildCount="1"
+    builtWith="Adobe Experience Manager-6.0.0.SNAPSHOT-20140204"
+    fixedBugs=""
+    group="my_packages"
+    lastUnwrapped="{Date}2014-08-27T12:39:52.813+03:00"
+    lastUnwrappedBy="admin"
+    lastWrapped="{Date}2014-08-27T12:39:52.813+03:00"
+    lastWrappedBy="admin"
+    name="bla"
+    providerLink=""
+    providerName=""
+    providerUrl=""
+    testedWith=""
+    version="">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/cq.webinar"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/content/aem-webinar"
+            rules="[]"/>
+    </filter>
+</jcr:root>

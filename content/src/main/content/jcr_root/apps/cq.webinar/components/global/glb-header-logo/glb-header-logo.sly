@@ -1,0 +1,8 @@
+<div class="header-title">
+	<h3>Title:  ${properties.jcr:title}</h3>
+    <br>
+
+    <dl dta-sly-list="${pageProperties.keys}">
+        <dt>${item}</dt>
+    </dl>
+</div><!--/.header-title-->

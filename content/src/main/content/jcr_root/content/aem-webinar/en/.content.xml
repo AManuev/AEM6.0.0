@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-08-27T12:28:43.001+03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cq.webinar/templates/home-page-template"
+        jcr:description="A root page for AEM webinar."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="en"
+        sling:resourceType="cq.webinar/pages/abstract-page"
+        detailDescription="No description."
+        landingPageContent="journal"
+        pageTitle="A root web pages with Webinar examples.">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+        <statustoggle
+            jcr:created="{Date}2010-11-30T09:53:36.661+01:00"
+            jcr:createdBy="admin"
+            jcr:lastModified="{Date}2012-08-29T15:03:00.221-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="social/commons/components/toggle"
+            confirmationMessageToggle="&lt;p>&lt;/p>"
+            confirmationMessageUntoggle="&lt;p>&lt;/p>"
+            stateProvider="/libs/social/group/components/stateproviders/join"
+            toggleLabel="Leave"
+            toggleWorkflowModel="/etc/workflow/models/social/group/join-community/jcr:content/model"
+            transitionLabel="Your request in progress"
+            untoggleLabel="Join"
+            untoggleWorkflowModel="/etc/workflow/models/social/group/leave-community/jcr:content/model"/>
+        <sidebar
+            jcr:lastModified="{Date}2012-12-17T12:28:49.522+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys"
+            inheritance="cancel">
+            <topforumtopics_fbbd
+                jcr:created="{Date}2012-12-17T12:06:08.721+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2012-12-17T12:06:08.721+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors/components/social/analytics/components/topforumtopics"
+                requesttype="synchronous"
+                title="Top Forum Topics">
+                <report jcr:primaryType="nt:unstructured">
+                    <thirtyday/>
+                </report>
+            </topforumtopics_fbbd>
+            <upcomingevents_e379
+                jcr:created="{Date}2012-12-17T17:54:58.461+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2012-12-17T19:54:19.610+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors/components/social/calendar/components/upcomingevents"
+                calendarPagePath="/content/geometrixx-outdoors/en/community/hiking/calendar"
+                maxEvents="{Long}3"
+                title="Upcoming Events"/>
+            <useractivities_701e
+                jcr:created="{Date}2012-12-17T12:30:05.328+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2012-12-17T13:45:05.325+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors/components/social/activitystreams/communitystreams/useractivities"
+                title="Activity Stream"
+                userdisplayselection="LOGGEDINUSER"/>
+            <topusers_8d26
+                jcr:created="{Date}2012-12-17T12:06:23.514+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2012-12-17T12:10:02.285+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors/components/social/analytics/components/topusers"
+                requesttype="synchronous"
+                title="Top Members">
+                <report
+                    jcr:primaryType="nt:unstructured"
+                    interval="{Long}3600"
+                    source="screport:default">
+                    <thirtyday/>
+                </report>
+            </topusers_8d26>
+            <iparsys_fake_par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/iparsys/par"/>
+        </sidebar>
+    </jcr:content>
+    <sightly---some-simple-examples/>
+</jcr:root>
