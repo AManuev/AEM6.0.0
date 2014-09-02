@@ -1,0 +1,21 @@
+<!--/* A Sightly Comment: Get Page title example.  See the resourceSuperType property. */-->
+
+<body>
+<h2>Page Title: '<i>${properties.jcr:title}</i>'</h2>
+
+<!--/* A Sightly data attributes. */-->
+<div data-sly-resource="${granite.resource.path @ resourceType='wcm/foundation/components/parsys'}"></div>
+<br>
+<b>properties</b> - List of properties of the current resource.
+<br>
+<b>pageProperties</b> - List of page properties of the current Page.
+
+
+<br><br>
+<h4>Include other component example:</h4>
+<br>
+
+<div class="glb-unwrap-example_inner"
+     data-sly-resource="${ 'unwrap-resource' @ resourceType='cq.webinar/components/global/glb-unwrap-example'}"
+     data-sly-unwrap></div>
+</body>

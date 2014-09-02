@@ -1,0 +1,17 @@
+<body>
+    <h3>Text, Test and List example page.</h3>
+    <br>
+    <p data-sly-text="${wcmmode.edit}">AUTHOR</p>
+
+    <p data-sly-test="${wcmmode.edit}">Show only in edit mode.</p>
+
+    <p data-sly-test="${wcmmode.design}">Show only in design mode.</p>
+
+
+    <br>
+    <dl data-sly-list="${properties.testList}">
+        <dt>Index: ${itemList.index}</dt>
+        <dd>Value: "${item}"</dd>
+    </dl>
+
+</body>
