@@ -1,0 +1,41 @@
+<body>
+<h2>Template & Call example page.</h2>
+<br>
+
+<h3>1. Define a static template.</h3>
+<template data-sly-template.one>Simple static template example.</template>
+
+<div data-sly-call="${one}">Will be replaced.</div>
+<br>
+
+<h3>2. Define a dynamic template.</h3>
+
+<!-- /* Everything after the '@' is an option. */ -->
+<template data-sly-template.two="${ @ title}"><h4><strong>Page title: ${title}</strong></h4></template>
+
+<div data-sly-call="${two @ title=properties.jcr:title}">No title.</div>
+
+<br>
+
+<h3>3. Define template in a separate file.</h3>
+
+<div data-sly-use.lib="element-template.html">
+    <!-- /* Note that in this case 'data-sly-use' and 'data-sly-call' could be placed in same element. */ -->
+    <div data-sly-call="${lib.three}">Stub data.</div>
+</div>
+
+<br>
+
+<h3>4. Template recursion call.</h3>
+
+<template data-sly-template.nav="${ @ page}">
+    <ul data-sly-list="${page.listChildren}">
+        <li>
+            <div class="title">${item.title}</div>
+            <div data-sly-call="${nav @ page=item}" data-sly-unwrap></div>
+        </li>
+    </ul>
+</template>
+
+<div data-sly-call="${nav @ page=currentPage}" data-sly-unwrap></div>
+</body>
