@@ -1,0 +1,42 @@
+<body>
+<h2>Expression options example page.</h2>
+<br>
+
+<h3>1. String formatting.</h3>
+
+<div>${'Page with title "{0}".' @ format=[currentPage.title]}</div>
+<br>
+
+<h3>2. I18n.</h3>
+<!--/* http://localhost:4502/libs/cq/i18n/translator.html */-->
+<!--/* default:  current 'resource', but you can change it */-->
+<p>${'Page' @ i18n}</p> AND <p>${'Page' @ i18n, locale='fr'}</p> AND <p>${'Page' @ i18n, source='user'}</p>
+
+<br>
+
+<h3>3. Array join.</h3>
+
+<div>${['one', 'two', 'three'] @ join='; '}</div>
+<br>
+
+<h3>4. Display context.</h3>
+
+<p>Here we have three variables in three different contexts: <b>properties.link</b> (uri context),
+    <b>properties.title</b> (attribute context)
+    and <b>properties.text</b> (text context). <i>Sightly</i> will escape each of these differently in accordance with
+    the security requirements of theirs respective contexts. No explicit context settings is required in normal cases
+    such as this one:</p>
+    <a href="${properties.link}" title="${properties.title}">${properties.text}</a>
+
+    <br><h5> Explicit context: HTML:</h5>
+    <div>${properties.richText @ context='html'}</div>
+    <br><h5> Explicit context: Style:</h5>
+    <span style=" color: ${properties.color @ context='styleToken'};">Styling string</span>
+    <br><h5> Explicit context: Script:</h5>
+    <span onclick="${properties.function @ context='scriptToken'}();">Script string</span>
+    <br><h5> Explicit context: Off:</h5>
+    <div>${properties.richText @ context='unsafe'}</div>
+
+<br>
+
+</body>
