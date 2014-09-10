@@ -1,0 +1,29 @@
+<body>
+<h3>WCMUSE example page.</h3>
+<br>
+
+<div data-sly-use.model="com.epam.webinar.beans.SightlyExampleBean">
+
+    <h2>
+        <cufon class="cufon cufon-canvas" alt="${model.myTitle}" style="width: 232px; height: 30px;">
+            <canvas width="255" height="31" style="width: 255px; height: 31px; top: 0; left: -1px;">
+            </canvas>
+            <cufontext>${model.myTitle}</cufontext>
+        </cufon>
+    </h2>
+</div>
+<div style="text-align: center;"><h1>OR</h1></div>
+<div data-sly-use.model="com.epam.webinar.beans.SightlyExampleTwoBean">
+
+    <h2>
+        <cufon class="cufon cufon-canvas" alt="${model.myTitle}" style="width: 232px; height: 30px;">
+            <canvas width="255" height="31" style="width: 255px; height: 31px; top: 0; left: -1px;">
+            </canvas>
+            <cufontext>${model.myTitle}</cufontext>
+        </cufon>
+    </h2>
+</div>
+
+<br>
+
+</body>
