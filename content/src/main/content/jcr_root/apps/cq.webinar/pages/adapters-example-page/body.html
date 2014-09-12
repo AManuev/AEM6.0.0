@@ -1,0 +1,18 @@
+<body>
+<h3>Adapters example page.</h3>
+<br>
+
+1. First example: Adapt current resource to model:
+<div data-sly-use.model="com.epam.webinar.adapter.models.SimpleResourceModel">
+    Title get from adapted model class: <i>${model.title || "No title"}</i>
+</div>
+<br><br>
+2. Second example: Adapt current request to model:
+<div data-sly-use.model="${ 'com.epam.webinar.adapter.models.SimpleRequestModel' @ title='Param title', page=currentPage}">
+
+    Title get from adapted model class: <i>${model.title || "No title"}</i>.
+    <br>
+    Get page send into request and get path from page in model: <i>${model.page.path || "No model page path found."}</i>
+</div>
+
+</body>

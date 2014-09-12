@@ -80,6 +80,12 @@
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.models.api</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!-- ====================================================================== -->
@@ -106,6 +112,9 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>com.epam.webinar.AEM6.0.0-bundle</Bundle-SymbolicName>
+                        <Sling-Model-Packages>
+                            com.epam.webinar.sling.model
+                        </Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
