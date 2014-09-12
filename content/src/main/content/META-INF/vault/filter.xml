@@ -2,4 +2,5 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/cq.webinar"/>
     <filter root="/content/aem-webinar"/>
+    <filter root="/libs/foundation/global.jsp"/>
 </workspaceFilter>

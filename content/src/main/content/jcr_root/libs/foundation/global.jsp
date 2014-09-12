@@ -60,7 +60,7 @@
 %><%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><%
 %><%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%
 %><cq:defineObjects /><%
-
-    // add more initialization code here
-
+// add more initialization code here
 %>
+<%-- NOTE: Already available, but still not init. Check in console list of all tag libraries in container. --%>
+<%@taglib prefix="sling2" uri="http://sling.apache.org/taglibs/sling" %>
