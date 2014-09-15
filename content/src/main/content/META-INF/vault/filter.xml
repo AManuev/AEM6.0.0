@@ -3,4 +3,5 @@
     <filter root="/apps/cq.webinar"/>
     <filter root="/content/aem-webinar"/>
     <filter root="/libs/foundation/global.jsp"/>
+    <filter root="/etc/clientlibs/cq.webinar"/>
 </workspaceFilter>

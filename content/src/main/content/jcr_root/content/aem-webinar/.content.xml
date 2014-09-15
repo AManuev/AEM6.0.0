@@ -8,6 +8,7 @@
         cq:siteOwner=""
         cq:template="/apps/cq.webinar/templates/page"
         jcr:primaryType="cq:PageContent"
+        jcr:description="This is a landing page."
         jcr:title="CQ 6.0 Webinar"
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"

@@ -1,0 +1,30 @@
+<body>
+    <h3>Client Libraries example page.</h3>
+    <br>
+    <h4>1. How to use client libraries.</h4>
+    <script type="text/javascript">
+        alert(CQ.webinar.getSomeString());
+    </script>
+
+    <h4>2. How to use JS helpers with template and parameter.</h4>
+
+    <section data-sly-use.tmpl="template.html" data-sly-call="${tmpl.templateName @ page=currentPage.parent}">
+    </section>
+
+    <br><br>
+
+    <h4>3. How to use JS helpers.</h4>
+    <section data-sly-use.component="sue-script.js">
+        <h1>${component.title}</h1>
+        <p>${component.description}</p>
+    </section>
+
+    <br><br>
+
+    <h4>4. Extending JS helpers.</h4>
+    <section data-sly-use.component="sue-ext-script.js">
+        <h1>${component.title}</h1>
+        <p>${component.description}</p>
+        <p>${component.specification}</p>
+    </section>
+</body>

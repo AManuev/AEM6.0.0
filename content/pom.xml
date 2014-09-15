@@ -96,6 +96,7 @@
       <includes>  
           <include>apps/**</include>  
           <include>content/**</include>  
+          <include>etc/**</include>  
           <include>libs/foundation/global.jsp</include>
     </includes>  
             </resource>
